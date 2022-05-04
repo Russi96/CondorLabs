@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="team"
+            type="com.app.domain.Team" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_condor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.fragments.DetailsFragment">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_dimen_32"
+                android:layout_marginTop="96dp"
+                android:fontFamily="@font/lilita_one"
+                android:gravity="center"
+                android:text="@{team.strAlternate}"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Barcelona" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_dimen_32"
+                android:layout_marginTop="@dimen/common_dimen_default"
+                android:fontFamily="@font/lilita_one"
+                android:gravity="center"
+                android:text="@{team.intFormedYear}"
+                android:textColor="@color/yellow"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:text="1998" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_dimen_32"
+                android:layout_marginTop="@dimen/common_dimen_default"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:text="@{team.strDescriptionES}"
+                android:textColor="@color/yellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:ignore="UnusedAttribute"
+                tools:text="El Deportivo Alavés, S.A.D es un club de fútbol español con sede en la ciudad de Vitoria. Fue fundado en el año 1921 y actualmente juega en la Segunda División de España. Su mayor éxito deportivo tuvo lugar en 2001, cuando, en el año de su debut en competición europea, fue finalista de la Copa de la UEFA ante el Liverpool FC, siendo derrotado por gol de oro (5-4)." />
+
+            <ImageView
+                android:id="@+id/ivBadgeTeam"
+                android:layout_width="@dimen/high_logo_small"
+                android:layout_height="@dimen/high_logo_small"
+                android:layout_marginTop="@dimen/common_dimen_16"
+                android:contentDescription="@{team.strAlternate}"
+                android:src="@drawable/logo"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/ivJerseyTeam"
+                android:layout_width="@dimen/high_logo_small"
+                android:layout_height="@dimen/high_logo_small"
+                android:layout_marginTop="@dimen/common_dimen_16"
+                android:contentDescription="@{team.strAlternate}"
+                android:src="@drawable/jersey"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_dimen_16"
+                android:layout_marginBottom="@dimen/common_dimen_16"
+                android:contentDescription="@null"
+                android:sendUrlWeb="@{team.strWebsite}"
+                android:src="@drawable/web_link"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="@+id/ivBadgeTeam"
+                app:layout_constraintTop_toBottomOf="@+id/ivBadgeTeam" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_dimen_16"
+                android:layout_marginBottom="@dimen/common_dimen_16"
+                android:contentDescription="@null"
+                android:sendUrlWeb="@{team.strFacebook}"
+                android:src="@drawable/facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/ivBadgeTeam" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_dimen_16"
+                android:layout_marginBottom="@dimen/common_dimen_16"
+                android:contentDescription="@null"
+                android:sendUrlWeb="@{team.strInstagram}"
+                android:src="@drawable/instagram"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/ivBadgeTeam" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_dimen_16"
+                android:layout_marginBottom="@dimen/common_dimen_16"
+                android:contentDescription="@null"
+                android:sendUrlWeb="@{team.strTwitter}"
+                android:src="@drawable/twitter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivJerseyTeam"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/ivJerseyTeam" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

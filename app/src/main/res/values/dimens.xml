@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_dimen_32">32dp</dimen>
+    <dimen name="common_dimen_padding_default">8dp</dimen>
+    <dimen name="common_dimen_padding_32">32dp</dimen>
+    <dimen name="common_dimen_default">8dp</dimen>
+    <dimen name="common_dimen_120">120dp</dimen>
+    <dimen name="high_logo">250dp</dimen>
+    <dimen name="common_dimen_16">16dp</dimen>
+    <dimen name="high_logo_small">150dp</dimen>
+    <dimen name="common_margin_100">100dp</dimen>
+    <dimen name="common_margin_210">210dp</dimen>
+</resources>
